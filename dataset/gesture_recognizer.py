@@ -374,12 +374,12 @@ class GestureRecognizer(object):
         self.label_encoder = LabelEncoder().fit(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N',
        'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y'])
 
-    # def __init__(self,data_dir, hand_Detector, sign_Detector):
-    #     self.data_directory = data_dir
-    #     self.handDetector = loadClassifier(hand_Detector)
-    #     self.signDetector = loadClassifier(sign_Detector)
-    #     self.label_encoder = LabelEncoder().fit(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N',
-    #    'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y'])
+    def __init__(self,data_dir, hand_Detector, sign_Detector):
+        self.data_directory = data_dir
+        self.handDetector = loadClassifier(hand_Detector)
+        self.signDetector = loadClassifier(sign_Detector)
+        self.label_encoder = LabelEncoder().fit(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N',
+       'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y'])
 
 
     def train(self, train_list):
@@ -527,7 +527,7 @@ class GestureRecognizer(object):
 
         # People using deep learning need to reinitalize model, load weights here etc.
 
-'''
+
 def main():
     handDetector = loadClassifier('./handDetector.pkl')
     signDetector = loadClassifier('./signDetector.pkl')
@@ -577,3 +577,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+'''
